@@ -1,0 +1,77 @@
+html, body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Open Sans";
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/OpenSans-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/OpenSans-Bold.ttf);
+    font-weight: bold;
+}
+
+.header {
+    background-image: url("../images/banner-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    height: 449px;
+    position: relative;
+    z-index: 0;
+
+    padding: 28px 248px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.logo {
+    height: 41px;
+}
+
+.header__menu {
+    font-size: 13px;
+}
+
+.menu__list {
+    list-style-type: none;
+    text-transform: uppercase;
+    display: flex;
+    gap: 36px;
+}
+
+.menu__item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.header__text {
+    width: 680px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 45px;
+    text-align: center;
+}
+
