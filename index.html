@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOEMI | Главная</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css"> <!-- Базовые стили Mobile First -->
+    <link rel="stylesheet" href="css/tablet.css" media="(min-width: 768px)"> <!-- От 768px и выше -->
+    <link rel="stylesheet" href="css/desktop.css" media="(min-width: 1660px)">  <!-- От 1660px и выше-->
 </head>
 <body>
 
-<input type="checkbox" id="popup-toggle" class="popup__toggle" checked hidden>
+<input type="checkbox" id="popup-toggle" class="popup__toggle" hidden>
 
 <label for="popup-toggle" class="popup__overlay"></label>
 <div class="popup">
@@ -85,6 +87,8 @@
                 </li>
             </ul>
         </nav>
+
+        <nav class="header__burger-menu"></nav>
     </div>
 
     <div class="header__slogan">
@@ -380,9 +384,30 @@
         <h2 class="goods__title">Наши изделия</h2>
         <div class="goods__container">
             <div class="goods__item">
-                <div class="good__image-wrapper">
-                    <img src="images/shop-item-desk1.jpg" alt="" class="good__image">
-                </div>
+                <picture class="good__image-wrapper">
+                    <source 
+                        class="good__image"
+                        srcset="images/shop-item-mobile1.jpg"
+                        media="(max-width: 767px)"
+                    >
+                    
+                    <source 
+                        class="good__image"
+                        srcset="images/shop-item-tablet1.jpg" 
+                        media="(min-width: 768px) and (max-width: 1659px)"
+                    >
+                    
+                    <source 
+                        class="good__image"
+                        srcset="images/shop-item-desk1.jpg" 
+                        media="(min-width: 1660px)"
+                    >
+                    
+                    <img 
+                        class="good__image"
+                        src="images/shop-item-desk1.jpg" 
+                    >
+                </picture>
                 <div class="good__content">
                     <h3 class="good__heading">Подушки на диван</h3>
                     <div class="good__description">Набор из двух подушек с модными принтами. Видео о создании <a href="#" class="good__link">здесь</a>.</div>
@@ -396,9 +421,30 @@
                 </div>
             </div>
             <div class="goods__item">
-                <div class="good__image-wrapper">
-                    <img src="images/shop-item-desk2.jpg" alt="" class="good__image">
-                </div>
+                <picture class="good__image-wrapper">
+                    <source 
+                        class="good__image"
+                        srcset="images/shop-item-mobile2.jpg"
+                        media="(max-width: 767px)"
+                    >
+                    
+                    <source 
+                        class="good__image"
+                        srcset="images/shop-item-tablet2.jpg" 
+                        media="(min-width: 768px) and (max-width: 1659px)"
+                    >
+                    
+                    <source 
+                        class="good__image"
+                        srcset="images/shop-item-desk2.jpg" 
+                        media="(min-width: 1660px)"
+                    >
+                    
+                    <img 
+                        class="good__image"
+                        src="images/shop-item-desk2.jpg" 
+                    >
+                </picture>
                 <div class="good__content">
                     <h3 class="good__heading">Кукла «Зайчик»</h3>
                     <div class="good__description">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#" class="good__link">весенняя серия постов</a> в блоге и несколько подкастов</div>
@@ -411,9 +457,30 @@
                 </div>
             </div>
             <div class="goods__item">
-                <div class="good__image-wrapper">
-                    <img src="images/shop-item-desk3.jpg" alt="" class="good__image">
-                </div>
+                <picture class="good__image-wrapper">
+                    <source 
+                        class="good__image"
+                        srcset="images/shop-item-mobile3.jpg"
+                        media="(max-width: 767px)"
+                    >
+                    
+                    <source 
+                        class="good__image"
+                        srcset="images/shop-item-tablet3.jpg" 
+                        media="(min-width: 768px) and (max-width: 1659px)"
+                    >
+                    
+                    <source 
+                        class="good__image"
+                        srcset="images/shop-item-desk3.jpg" 
+                        media="(min-width: 1660px)"
+                    >
+                    
+                    <img 
+                        class="good__image"
+                        src="images/shop-item-desk3.jpg" 
+                    >
+                </picture>
                 <div class="good__content">
                     <h3 class="good__heading">Шестиугольная рамка</h3>
                     <div class="good__description">Необычная рамка для украшения дома из видео <a href="#" class="good__link">«Как сделать рамку из подручных средств за 30 минут»</a></div>
